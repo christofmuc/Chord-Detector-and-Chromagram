@@ -14,6 +14,6 @@ set(SOURCES
 )
 
 add_library(chromagram ${SOURCES} ${KISSFFT})
-target_include_directories(chromagram PUBLIC libs/kiss_fft130/)
-target_compile_definitions(chromagram PRIVATE -DUSE_KISS_FFT)
+target_include_directories(chromagram PUBLIC ${CMAKE_CURRENT_LIST_DIR}/src libs/kiss_fft130/)
+target_compile_definitions(chromagram PUBLIC -DUSE_KISS_FFT)
 
